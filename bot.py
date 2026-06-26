@@ -1,7 +1,7 @@
 import telebot
 
 # ⚠️ Yahan apna asli Bot Token dalein
-BOT_TOKEN = '8997723330:AAHaFDzFezZ27jsoV60m-kgCUq0KbqV'
+BOT_TOKEN = '8997723330:AAHaFDzFezZ27jsoV60m-kgCUq0KbqVsXV4'
 bot = telebot.TeleBot(BOT_TOKEN)
 
 # ⚠️ Yahan apne target group/channel ki Chat ID dalein
