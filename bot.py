@@ -1,10 +1,28 @@
+import threading
+from flask import Flask
 import telebot
 
-# ⚠️ Yahan apna asli Bot Token dalein
+# ---- YAHAN SE NAYA CODE SHURU HAI (REPLIT KO ZINDA RAKHNE KE LIYE) ----
+app = Flask('')
+
+@app.route('/')
+def home():
+    return "Bot is alive and running!"
+
+def run_web_server():
+    app.run(host='0.0.0.0', port=8080)
+
+# Web server ko alag thread me chalu karenge taaki bot bhi chalta rahe
+t = threading.Thread(target=run_web_server)
+t.start()
+# ---- NAYA CODE YAHAN KHATAM HAI ----
+
+
+# ⚠️ Yahan tumhara asli Bot Token pehle se dala hai
 BOT_TOKEN = '8997723330:AAHaFDzFezZ27jsoV60m-kgCUq0KbqVsXV4'
 bot = telebot.TeleBot(BOT_TOKEN)
 
-# ⚠️ Yahan apne target group/channel ki Chat ID dalein
+# ⚠️ Yahan tumhari target group/channel ki Chat ID pehle se dali hai
 TARGET_CHAT_ID = -1004410908316 
 
 @bot.message_handler(content_types=['photo', 'video', 'document', 'audio', 'voice'])
